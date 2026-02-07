@@ -1,22 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabul food</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food in Kabul</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>bring changes</h1>
-    <h2>  I want to bring changes to the VS code and see it on the github</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore amet possimus vel tempora. Dignissimos, illo ipsam molestiae unde possimus eius ullam labore laborum autem minus sint vero quas nulla esse!</p>
-  
+<body class="f-body">
 
-    <h2>succus</h2>
-    <p>finally i could connect my vs code with github</p>
-    <p>it wasnt easy but wasnt imposible</p>
-    <h3>practic</h3>
-    <h4>more practice</h4>
-    <h5>easy practice</h5>
-    <p>it is my new work</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">Kabul City</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="food.html" class="active">Food</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="f-hero">
+    <div class="f-hero-text">
+      <h1>Food in Kabul</h1>
+      <p>Taste the Delicious Flavors of Afghan Cuisine</p>
+      <button id="explore-btn">Explore Afghan Cuisine</button>
+    </div>
+  </section>
+
+  <!-- ===== EXPLORE TEXT (Hidden by default) ===== -->
+  <section id="explore-text" class="f-explore-text" style="display:none;">
+    <p>
+      Afghan cuisine is rich, flavorful, and full of tradition. Popular dishes like Kabuli Pulao, Mantu, Bolani, and Kebab are loved by people of all ages. 
+      These meals are often prepared during family gatherings, celebrations, and special guest visits. 
+      Afghan food combines rice, meat, vegetables, and aromatic spices in a unique and delicious way. 
+      Hospitality is very important in Afghan culture, and serving tasty food is a sign of respect. 
+      If you ever get the chance, trying Afghan food will be a memorable and delightful experience.
+    </p>
+  </section>
+
+  <!-- ===== DISHES SECTION ===== -->
+  <section class="f-dishes">
+    <h2>Popular Afghan Dishes</h2>
+    <p class="f-subtext">Discover some of the most popular and delicious dishes you must try while visiting Kabul.</p>
+
+    <div class="f-grid">
+
+      <!-- Kabuli Pulao -->
+      <div class="f-card">
+        <img src="images/qabuli pulao.jpg" alt="qabuli pulao">
+        <div class="f-card-body">
+          <h3>qabuli pulao</h3>
+          <p>A fragrant rice dish with tender lamb, carrots, raisins, and almonds.</p>
+          <a href="#qabuli-more" class="f-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Mantu -->
+      <div class="f-card">
+        <img src="images/mantu.jpg" alt="Mantu">
+        <div class="f-card-body">
+          <h3>Mantu</h3>
+          <p>Steamed dumplings filled with spiced ground meat, topped with yogurt.</p>
+          <a href="#mantu-more" class="f-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Kebab -->
+      <div class="f-card">
+        <img src="images/kebab.jpg" alt="Kebab">
+        <div class="f-card-body">
+          <h3>Kebab</h3>
+          <p>Grilled skewers of marinated beef, lamb, or chicken.</p>
+          <a href="#kebab-more" class="f-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Bolani -->
+      <div class="f-card">
+        <img src="images/bolani.jpg" alt="Bolani">
+        <div class="f-card-body">
+          <h3>Bolani</h3>
+          <p>A stuffed flatbread filled with potatoes, green onions, and herbs.</p>
+          <a href="#bolani-more" class="f-btn">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== READ MORE POPUPS ===== -->
+  <div id="qabuli-more" class="food-more">
+    <div class="food-more-content">
+      <h2>Kabuli Pulao</h2>
+      <p>
+        Qabuli Pulao is the most famous traditional dish of Afghanistan. 
+        It is made with rice, tender meat, carrots, raisins, and delicious spices. 
+        People love to cook it for weddings and special family gatherings. 
+        This dish shows Afghan hospitality and you should definitely try it.
+      </p>
+      <a href="#" class="f-close">Close ✖</a>
+    </div>
+  </div>
+
+  <div id="mantu-more" class="food-more">
+    <div class="food-more-content">
+      <h2>Mantu</h2>
+      <p>
+        Mantu is a popular Afghan dumpling filled with spiced minced meat and onions. 
+        It is steamed and served with yogurt sauce and lentils on top. 
+        Families prepare Mantu for guests because it is special and delicious. 
+        Its soft texture and rich flavor make it a favorite traditional dish.
+      </p>
+      <a href="#" class="f-close">Close ✖</a>
+    </div>
+  </div>
+
+  <div id="kebab-more" class="food-more">
+    <div class="food-more-content">
+      <h2>Kebab</h2>
+      <p>
+        Afghan Kebab is a favorite street food and party dish across the country. 
+        It is made with grilled meat seasoned with simple but tasty spices. 
+        People enjoy kebab at gatherings, picnics, and celebrations. 
+        Its smoky flavor and juicy texture make it one of the most loved Afghan foods.
+      </p>
+      <a href="#" class="f-close">Close ✖</a>
+    </div>
+  </div>
+
+  <div id="bolani-more" class="food-more">
+    <div class="food-more-content">
+      <h2>Bolani</h2>
+      <p>
+        Bolani is a delicious Afghan flatbread filled with potatoes or greens. 
+        It is fried until crispy and served with yogurt or chutney. 
+        Bolani is common during family meals and festive occasions. 
+        Its crispy outside and soft filling make it a favorite snack.
+      </p>
+      <a href="#" class="f-close">Close ✖</a>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Read More Popups: کار می‌کند با لینک‌های href="#id"
+    // Explore Button
+    const btn = document.getElementById('explore-btn');
+    const text = document.getElementById('explore-text');
+
+    btn.addEventListener('click', () => {
+      if(text.style.display === "none") {
+        text.style.display = "block";
+        text.scrollIntoView({behavior: "smooth"});
+      } else {
+        text.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
