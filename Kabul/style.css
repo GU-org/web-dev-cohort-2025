@@ -14,13 +14,13 @@ root {
     padding: 0;
 }
 
-body {
+.gallery {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--sand-beige);
+    /* background:#F3ECDC; */
     color: white;
 }
 /* NAVBAR */
-.navbar {
+.navbar-gallery {
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -46,6 +46,9 @@ body {
 
 .nav-links a {
     color: white;
+    &:hover {
+        color:#0B1F3B;
+    }
     text-decoration: none;
     font-weight: 500;
 }
@@ -53,8 +56,9 @@ body {
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url("./images/Shah Do Shamshera (2).jpg") center/cover no-repeat;
+                url("./images/Shah Do Shamshera  1.jpg") center/cover no-repeat;
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -99,16 +103,23 @@ body {
     gap: 24px;
     padding: 20px;
     justify-content: center;
-    background:#F3ECDC
+    background:#F3ECDC;
+    height: 80vh;
 
 }
 .feature-card {
     background:#0B1F3B;
     width:300px;
+    height: 90%;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 .feature-card img {
@@ -145,18 +156,20 @@ body {
 .about-content {
     background:#0B1F3B;
     background-color: transparent;
-    width:50%;
+    width:40%;
     height: 450px;
     padding: 30px;
     margin: 10px;
     border-radius: 8px;
     text-align: left;
     color: #0B1F3B;
-
-
+    h2{
+        margin-bottom: 10px;
+    }
 }
+
 .image-container {
-    width: 100%;
+    width: 50%;
     height: 180px;
     object-fit: cover; 
     flex-shrink: 0;
@@ -165,6 +178,7 @@ body {
     flex: 2;
     flex-wrap: wrap;
     gap: 10px;
+
     img{
         width: 300px;
         height: 200px;
@@ -177,8 +191,113 @@ footer {
     background: #0B1F3B;
     color: white;
     padding: 20px 0;
+    text-align: left;
+    border-top: 1px solid #F3ECDC;
+}
+.footer-p {
     text-align: center;
 }
 
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+}
 
 
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .features {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+
+    .feature-card {
+        width: 280px;
+        height: auto;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+
+    .features {
+        flex-wrap: nowrap;
+        height: 80vh;
+    }
+
+    .about {
+        flex-direction: row;
+    }
+
+    .about-content {
+        width: 40%;
+    }
+
+    .image-container {
+        width: 60%;
+    }
+}
